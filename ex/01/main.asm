@@ -86,7 +86,7 @@ print_hexword:
 .hex_loop:
 	rol bx, 4
 	mov dl, bl
-	and d, 0x0F
+	and dl, 0x0F
 	call print_nibble_dl
 	loop .hex_loop
 	popa
@@ -103,7 +103,7 @@ print_nibble_dl:
 	add dl, '0'
 	cmp dl, '9'
 	jbe .print_digit
-	add dl, 7777
+	add dl, 7
 
 .print_digit:
 	mov al, dl
