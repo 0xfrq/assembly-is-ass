@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assembly Playground</title>
+    <link rel="stylesheet" href="playground.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Assembly Playground</h1>
+        <p>
+          Load an example file from this repo or upload your own NASM file to edit
+          in the browser.
+        </p>
+      </header>
+
+      <section class="controls">
+        <label class="control">
+          Example
+          <select id="example-select">
+            <option value="">Select an example...</option>
+            <option value="dword1.asm">dword1.asm</option>
+            <option value="memadd1.asm">memadd1.asm</option>
+            <option value="memadd2.asm">memadd2.asm</option>
+            <option value="qword1.asm">qword1.asm</option>
+            <option value="test0.asm">test0.asm</option>
+            <option value="test1.asm">test1.asm</option>
+            <option value="test2.asm">test2.asm</option>
+            <option value="test3.asm">test3.asm</option>
+            <option value="test4.asm">test4.asm</option>
+            <option value="test5.asm">test5.asm</option>
+            <option value="test6.asm">test6.asm</option>
+          </select>
+        </label>
+
+        <label class="control">
+          Upload your own
+          <input id="file-input" type="file" accept=".asm" />
+        </label>
+
+        <button id="copy-button" type="button">Copy to clipboard</button>
+      </section>
+
+      <section class="editor">
+        <textarea
+          id="source"
+          spellcheck="false"
+          placeholder="Choose an example or paste your own assembly here."
+        ></textarea>
+      </section>
+
+      <section class="status" id="status" aria-live="polite"></section>
+    </main>
+
+    <script src="playground.js"></script>
+  </body>
+</html>
