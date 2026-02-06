@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b0d10;
+  color: #f8f9fa;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 0;
+  color: #c9ced6;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+  margin: 1.5rem 0;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+select,
+input[type="file"],
+button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #30343b;
+  background: #161a20;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1e232b;
+}
+
+.editor {
+  border: 1px solid #30343b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+textarea {
+  width: 100%;
+  min-height: 420px;
+  padding: 1rem;
+  border: 0;
+  resize: vertical;
+  background: #0f1218;
+  color: #f8f9fa;
+  font-family: "Fira Code", "Cascadia Code", "SFMono-Regular", monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.status {
+  margin-top: 1rem;
+  min-height: 1.5rem;
+  color: #a7f3d0;
+}
+
+.status.error {
+  color: #fca5a5;
+}
+
+@media (max-width: 720px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+}
